@@ -6,11 +6,16 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
+        plugin = {"html:target/cucumber-reports.html",
+                "json:target/json-reports/cucumber.json",
+                "junit:target/xml-report/cucumber.xml"
+        },
         features = "src/test/resources/features",
         glue = "stepdefinitions",
         tags = "@regression and @smoke",
 
-        dryRun = false
+        dryRun = false      // eksik adim varmi diye kontrol ettigimizde "false" i "true" yapiyoruz.
+                            // sonuc pass yazsada cikan sonuc test'in degil, yapilandirma nin yapildini gosterir.
 )
 
 public class Runner {
@@ -46,6 +51,8 @@ public class Runner {
 
                Eger birden fazla tag'i kontrol ederek calistirmasini istersek
                "@regression or @smoke" veya "@regression and @smoke" gibi yazabiliriz
+
+               @wip: work in progress
 
        dryRun : Bir feature dosyasini ilk defa yazdigimizda
                 step'lerden bazilari daha once var oldugundan BEYAZ

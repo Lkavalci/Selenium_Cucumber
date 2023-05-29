@@ -26,13 +26,21 @@ public class AmazonPage {
     }
 
 
+
     @FindBy(id ="twotabsearchtextbox")
     public WebElement aramaKutusu;
 
     @FindBy(xpath = "(//div[@class='sg-col-inner'])[1]")
     public WebElement aramaSonucuElementi;
 
-}
+    @FindBy(xpath = "//*[@data-image-index='1']")
+    public WebElement ilkUrunElementi;
+
+    @FindBy(xpath = "//span[@id='productTitle']")
+    public WebElement ilkUrunIsimElementi;
+
+    }
+
     //https://www.qualitydemy.com/
 //qdGecerliUsername = anevzatcelik@gmail.com
 //qdGecerliPassword = Nevzat152032
@@ -72,5 +80,11 @@ public class AmazonPage {
     @FindBy(xpath = "(//div[@class='sg-col-inner'])[1]")
     public WebElement aramaSonucuElementi;
 
+    @FindBy(xpath = "//*[@data-image-index='1']")
+    public WebElement ilkUrunElementi;
+
+    @FindBy(xpath = "//span[@id='productTitle']")
+    public WebElement ilkUrunIsimElementi;
+
 }
- */
+*/
