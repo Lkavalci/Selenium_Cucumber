@@ -12,9 +12,9 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features",
         glue = "stepdefinitions",
-        tags = "@regression and @smoke",
+        tags = "@ae",
 
-        dryRun = false      // eksik adim varmi diye kontrol ettigimizde "false" i "true" yapiyoruz.
+        dryRun = false     // eksik adim varmi diye kontrol ettigimizde "false" i "true" yapiyoruz.
                             // sonuc pass yazsada cikan sonuc test'in degil, yapilandirma nin yapildini gosterir.
 )
 
